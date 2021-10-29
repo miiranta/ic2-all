@@ -3,8 +3,6 @@
 //Numero USP: 12542838
 //Professor:  Renato Tinós
 
-//Todos os arquivos estão disponíveis no github: https://github.com/miiranta/ic2-all
-
 #include <stdio.h>
 #include <string.h>
 #define MAXSIZE 1000
