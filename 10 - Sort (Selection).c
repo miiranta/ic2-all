@@ -5,7 +5,7 @@
 
 
 #include <stdio.h>
-int* sort(int* a, int N);
+void sort(int* a, int N);
 
 void main(){
     //           s  1  2   3   4   5   6   7   8  9    10     (NO SENTINEL! s is ignored)
@@ -21,7 +21,7 @@ void main(){
 }
 
 
-int* sort(int* a, int N){
+void sort(int* a, int N){
     int i, j, x, i_smallest;
 
     for(i=1; i<=(N-1); i++){

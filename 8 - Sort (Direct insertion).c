@@ -9,11 +9,11 @@
 
 
 #include <stdio.h>
-int* sort(int* a, int N);
+void sort(int* a, int N);
 
 void main(){
     //           s  1  2   3   4   5   6   7   8  9   10    (s is SENTINEL!)
-    int a[11] = {0, 9, 50, 40, 20, 30, 30, 10, 5, 12, 392}; //Has to be declared N+1 to avoid problems with sentinel!
+    int a[11] = {1, 9, 50, 40, 20, 30, 30, 10, 5, 12, 392}; //Has to be declared N+1 to avoid problems with sentinel!
     int N = 10;
 
     sort(a, N);
@@ -25,7 +25,7 @@ void main(){
 }
 
 
-int* sort(int* a, int N){
+void sort(int* a, int N){
     int i, j, x;
 
     for(i = 2; i<=N; i++){

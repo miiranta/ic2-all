@@ -1,11 +1,3 @@
-//Comparisons
-    //All cases O(n^2)
-//Movements
-    //Min O(1)
-    //Med O(n^2)
-    //Max O(n^2)
-
-
 #include <stdio.h>
 void sort(int* a, int N);
 
@@ -24,21 +16,31 @@ void main(){
 
 
 void sort(int* a, int N){
-    int i, j, x;
+    int L=2, R=N, k=N;
+    int j, x;
 
-    for(i=2; i<=N; i++){
-        for(j=N; j>=i; j--){
-
-            //Compare
-            if(a[j-1] > a[j]){
-
-                //Move
+    do{
+        for(j=R; j>=L; j=j-1){
+            if(a[j-1]>a[j]){
                 x = a[j-1];
                 a[j-1] = a[j];
                 a[j] = x;
+                k = j;
             }
-
         }
-    }
+
+        L = k + 1;
+
+        for(j=L; j<=R; j=j+1){
+            if(a[j-1]>a[j]){
+                x = a[j-1];
+                a[j-1] = a[j];
+                a[j] = x;
+                k = j;
+            }
+        }
+
+        R = k - 1;
+    }while(L<=R);
 
 }
